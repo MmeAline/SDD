@@ -1,0 +1,12 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void main()
+{
+	char* pSir;   //pointer la char;nu este initializat
+	pSir = new char[strlen("Tutorial") + 1]; //alocare spatiu in heap cu new
+	strcpy_s(pSir, strlen("Tutorial") + 1, "Tutorial");  //copiere + al doilea parametru este dimensiunea sirului
+	cout << pSir << endl;
+	delete[]pSir;  //dezalocare - pentru toate elementele vectorului sir
+}
