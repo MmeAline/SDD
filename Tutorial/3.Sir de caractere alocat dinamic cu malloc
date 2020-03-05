@@ -1,0 +1,12 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void main()
+{
+	char* mallocSir;
+	mallocSir = (char*)(malloc((sizeof(char)*(strlen("Tutorial") + 1)))); //alocare cu malloc - cast explicit la char;
+	strcpy_s(mallocSir, strlen("Tutorial") + 1, "Tutorial");   //copierea
+	cout << "Am afisat: " << mallocSir;
+	free(mallocSir);  //dezalocare
+}
