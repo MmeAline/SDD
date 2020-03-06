@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>  //pentru a lucra cu STL
+using namespace std;
+
+void main()
+{
+	vector<int> vec;   //vector din STL 
+	vec.push_back(6);  //adaugare elemente in vector
+	vec.push_back(2);
+	vec.push_back(3);
+	vec.push_back(1);
+	for (int i = 0; i < vec.size(); i++) { /// vec.size() returneaza nr elemente din vector
+		cout << vec[i] << " "; //afisare vector
+	}
+	cout<<endl; 
+	cout << "Exemplu 2: " << endl;
+
+	//Vector alocat static fara a mai folosi include <vector>
+	int v[10];   //nr maxim de elemente din vector;se aloca in heap
+	int dim = 0;
+	v[dim] = 7;
+	dim++;
+	v[dim] = 9;
+	dim++;
+	cin >> v[dim];
+	dim++;
+	for (int i = 0; i < dim; i++) {
+		cout << v[i] <<" ";
+	}
+	cout << endl;
+}
